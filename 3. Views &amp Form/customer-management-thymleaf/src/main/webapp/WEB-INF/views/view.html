@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head"></head>
+<body>
+<h3>View Customer</h3>
+<p>
+    <a th:href="@{/customer}">
+        Back to customer list
+    </a>
+</p>
+<div id="detail">
+    <div class="cusdetail">
+        <label>Name:</label>
+        <label th:text="${customer.name}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Email:</label>
+        <label th:text="${customer.email}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Address:</label>
+        <label th:text="${customer.address}"></label>
+    </div>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
