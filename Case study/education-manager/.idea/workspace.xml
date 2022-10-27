@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b999621-a1ea-400d-83fe-a5009dc2ae76" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/chuyen-doi-tien-te/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/chuyen-doi-tien-te/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/.idea/artifacts/demo_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/.idea/artifacts/demo_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/src/main/java/com/example/demo/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/demo/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/tu-dien/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. Tong quan Spring MVC/tu-dien/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2. Spring Controller/caculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2. Spring Controller/caculator/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2. Spring Controller/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../2. Spring Controller/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2. Spring Controller/sandwich/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2. Spring Controller/sandwich/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2. Spring Controller/sandwich/src/main/java/com/hieucodeg/controller/SanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2. Spring Controller/sandwich/src/main/java/com/hieucodeg/controller/SanController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2Gg5Lh8b4bmVAzXeGYpGDWmIxRQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b999621-a1ea-400d-83fe-a5009dc2ae76" name="Changes" comment="" />
+      <created>1666797332593</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666797332593</updated>
+      <workItem from="1666797335212" duration="2000" />
+    </task>
+    <servers />
+  </component>
+</project>

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.TimeZone;
 
@@ -20,7 +21,7 @@ public class SanController {
     }
 
     @RequestMapping("/save")
-    public String save(@RequestParam("condiment") String[] condiment, Model model) {
+    public String save(@RequestParam(required=false,name = "condiment") String[] condiment, Model model) {
         model.addAttribute("condiment", condiment);
         return "list";
     }
