@@ -4,15 +4,17 @@ import com.hieucodeg.model.Product;
 
 import java.util.List;
 
+import java.util.List;
+
 public interface IProductService {
     List<Product> findAll();
 
     void save(Product product);
 
-    Product findById(Integer id);
-    Product findByName(String name);
+    Product findById(int id);
 
-    void update(Integer id, Product product);
+    void update(int id, Product product);
 
-    void remove(Integer id);
+    void remove(int id);
+
 }

@@ -1,28 +1,29 @@
 package com.hieucodeg.model;
 
 public class Product {
-    private Integer id;
-    private String name;
-    private Integer price;
-    private String describe;
-    private String manufacture;
+    private int id;
 
-    public Product(Integer id, String name, Integer price, String describe, String manufacture) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.describe = describe;
-        this.manufacture = manufacture;
-    }
+    private String name;
+
+    private String description;
+
+    private String image;
 
     public Product() {
     }
 
-    public Integer getId() {
+    public Product(int id, String name, String description, String image) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.image = image;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -34,27 +35,19 @@ public class Product {
         this.name = name;
     }
 
-    public Integer getPrice() {
-        return price;
+    public String getDescription() {
+        return description;
     }
 
-    public void setPrice(Integer price) {
-        this.price = price;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getDescribe() {
-        return describe;
+    public String getImage() {
+        return image;
     }
 
-    public void setDescribe(String describe) {
-        this.describe = describe;
-    }
-
-    public String getManufacture() {
-        return manufacture;
-    }
-
-    public void setManufacture(String manufacture) {
-        this.manufacture = manufacture;
+    public void setImage(String image) {
+        this.image = image;
     }
 }
