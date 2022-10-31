@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bo Y TE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- modal -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+    <style>
+        body {
+            margin-top: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        table {
+            border: 1px solid black;
+        }
+        .btn-outline-danger {
+            border: 1px solid red;
+        }
+        .btn-outline-primary {
+            border: 1px solid blue;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h4>Customer information</h4>
+        <form method="POST" action="update" modelAttribute="">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fullName">Full name</label>
+                    <input type="text" class="form-control" id="fullName">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="rePassword">Re-password</label>
+                    <input type="password" class="form-control" id="rePassword">
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="phone">Phone</label>
+                    <input type="number" class="form-control" id="phone">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address">
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline-primary">Create Customer</button>
+        </form>
+
+        <table class="table table-sm table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th colspan="2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Philip Neville</td>
+                    <td>pikachu@gmail.com</td>
+                    <td>+1 (271) 543-3454</td>
+                    <td>Califonia</td>
+                    <td>
+                        <button type="button" class="btn  btn-outline-info " data-toggle="modal" data-target="#exampleModal">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                            Edit
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-danger " data-toggle="modal" data-target="#exampleModalCenter">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Devid BeckKham</td>
+                    <td>beatyful@gmail.com</td>
+                    <td>+1 (271) 555-3454</td>
+                    <td>USA</td>
+                    <td>
+                        <button type="button" class="btn  btn-outline-info " data-toggle="modal" data-target="#exampleModal">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                            Edit
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-danger " data-toggle="modal" data-target="#exampleModalCenter">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>KinataWa</td>
+                    <td>houss@gmail.com</td>
+                    <td>+1 (271) 543-3434</td>
+                    <td>Japan</td>
+                    <td>
+                        <button type="button" class="btn  btn-outline-info " data-toggle="modal" data-target="#exampleModal">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                            Edit
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-danger " data-toggle="modal" data-target="#exampleModalCenter">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Customer information</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fullName">Full name</label>
+                    <input type="text" class="form-control" id="fullName">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="phone">Phone</label>
+                    <input type="number" class="form-control" id="phone">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address">
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="height: 80px;">
+            <i class="fa-solid fa-circle-exclamation fa-2xl" style="color: orange; font-size: 50px;margin-top: 20px;"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+           <h4>Are you sure you want to delete the selected data?</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary mx-auto" >Yes, delete it!</button>
+          
+          <button type="button" class="btn btn-danger mx-auto" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+</body>
+
+</html>
