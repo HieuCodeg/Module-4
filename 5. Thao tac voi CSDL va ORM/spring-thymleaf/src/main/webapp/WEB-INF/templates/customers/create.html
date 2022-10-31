@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Information</title>
+</head>
+<body>
+<form action="/customers/save" method="post">
+  <fieldset>
+    <legend>Customer Information</legend>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>
+          <input type="text" name="name" th:value="${customer.name}">
+        </td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>
+          <input type="text" name="email" th:value="${customer.email}">
+        </td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>
+          <input type="text" name="address" th:value="${customer.address}">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="submit" value="create">
+        </td>
+      </tr>
+    </table>
+  </fieldset>
+</form>
+<a href="/customers">Back to list</a>.
+</body>
+</html>
