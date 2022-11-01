@@ -1,2 +1,13 @@
-package com.hieucodeg.cms.service;public interface IGeneralService {
+package com.hieucodeg.cms.service;
+
+import java.util.List;
+
+public interface IGeneralService<T> {
+    List<T> findAll();
+
+    T findById(Long id);
+
+    void save(T t);
+
+    void remove(Long id);
 }

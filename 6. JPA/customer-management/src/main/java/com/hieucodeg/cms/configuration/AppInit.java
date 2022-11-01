@@ -1,4 +1,4 @@
-package cg.wbd.grandemonstration;
+package com.hieucodeg.cms.configuration;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
