@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>View province</title>
 </head>
 <body>
-$END$
+<h1>View province: <span th:text="${province.name}"></span></h1>
+<a href="/provinces">Province list</a>
+<table border="1">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+  </tr>
+  <th:block th:each="customer : ${customers}">
+    <tr>
+      <td th:text="${customer.firstName}"></td>
+      <td th:text="${customer.lastName}"></td>
+    </tr>
+  </th:block>
+</table>
 </body>
 </html>
