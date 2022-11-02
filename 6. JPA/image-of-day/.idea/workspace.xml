@@ -5,37 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7d66ca1-ff37-4037-bb4a-277cc05160d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../customer-management/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/repository/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/repository/ICommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/repository/IGeneralRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/service/ICommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2. Spring Controller/sandwich/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../3. Views &amp;amp Form/products-manager/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../4. Data Binding &amp;amp Form/to-khai-y-te/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/java/com/hieucodeg/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/java/com/hieucodeg/configuration/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/java/com/hieucodeg/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/java/com/hieucodeg/model/Article.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/java/com/hieucodeg/repository/ArticleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/java/com/hieucodeg/repository/IArticleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/java/com/hieucodeg/repository/IGeneralRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/java/com/hieucodeg/service/ArticleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/java/com/hieucodeg/service/IArticleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/java/com/hieucodeg/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/webapp/WEB-INF/views/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/webapp/WEB-INF/views/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../my-blog/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Case study/education-manager/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2. Spring Controller/sandwich/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2. Spring Controller/sandwich/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../3. Views &amp;amp Form/customer-management-thymleaf/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../3. Views &amp;amp Form/customer-management-thymleaf/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../3. Views &amp;amp Form/customer-management-thymleaf/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../3. Views &amp;amp Form/customer-management-thymleaf/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3. Views &amp;amp Form/products-manager/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../3. Views &amp;amp Form/products-manager/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../4. Data Binding &amp;amp Form/to-khai-y-te/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../4. Data Binding &amp;amp Form/to-khai-y-te/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../4. Data Binding &amp;amp Form/to-khai-y-te/src/main/webapp/WEB-INF/views/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../4. Data Binding &amp;amp Form/to-khai-y-te/src/main/webapp/WEB-INF/views/info.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../5. Thao tac voi CSDL va ORM/image-of-day/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../5. Thao tac voi CSDL va ORM/image-of-day/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/java/com/hieucodeg/cms/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/java/com/hieucodeg/cms/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/java/com/hieucodeg/cms/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/java/com/hieucodeg/cms/repository/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/java/com/hieucodeg/cms/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/java/com/hieucodeg/cms/repository/ICustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/java/com/hieucodeg/cms/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/java/com/hieucodeg/cms/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/java/com/hieucodeg/cms/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/java/com/hieucodeg/cms/service/ICustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/webapp/WEB-INF/views/customer/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management-stored-procedure/src/main/webapp/WEB-INF/views/customer/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/configuration/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/configuration/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/configuration/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/configuration/AppInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/repository/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/repository/ICustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/repository/IGeneralRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/repository/IGeneralRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/service/ICustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/service/IGeneralService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/java/com/hieucodeg/cms/service/IGeneralService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/webapp/WEB-INF/views/customer/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/webapp/WEB-INF/views/customer/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/webapp/WEB-INF/views/customer/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/webapp/WEB-INF/views/customer/delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/webapp/WEB-INF/views/customer/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/webapp/WEB-INF/views/customer/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-management/src/main/webapp/WEB-INF/views/customer/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management/src/main/webapp/WEB-INF/views/customer/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/12377f78-00ee-4d61-b8a8-6107b0d0fb5a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/12377f78-00ee-4d61-b8a8-6107b0d0fb5a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../7. Spring Data Repository/customer-management/src/main/java/com/hieucodeg/cms/controller/ProvinceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../7. Spring Data Repository/customer-management/src/main/java/com/hieucodeg/cms/controller/ProvinceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../7. Spring Data Repository/customer-management/src/main/java/com/hieucodeg/cms/formatter/ProvinceFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../7. Spring Data Repository/customer-management/src/main/java/com/hieucodeg/cms/formatter/ProvinceFormatter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../7. Spring Data Repository/customer-management/src/main/java/com/hieucodeg/cms/model/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../7. Spring Data Repository/customer-management/src/main/java/com/hieucodeg/cms/model/Province.java" afterDir="false" />
@@ -2167,22 +2177,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/GitHub/Module-4/6. JPA/image-of-day",
-    "spring.configuration.checksum": "e9a2bdb0417613dc9643fd1cdc744ee5"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GitHub/Module-4/6. JPA/image-of-day&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e9a2bdb0417613dc9643fd1cdc744ee5&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\GitHub\Module-4\5. Thao tac voi CSDL va ORM\image-of-day\src\main\resources" />
@@ -2295,7 +2305,10 @@
       <workItem from="1667272804346" duration="840000" />
       <workItem from="1667273669078" duration="16168000" />
       <workItem from="1667304588580" duration="6428000" />
-      <workItem from="1667312309639" duration="3823000" />
+      <workItem from="1667312309639" duration="4665000" />
+      <workItem from="1667319924312" duration="1266000" />
+      <workItem from="1667364074012" duration="153000" />
+      <workItem from="1667364663991" duration="654000" />
     </task>
     <servers />
   </component>
