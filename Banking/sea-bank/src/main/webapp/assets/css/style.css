@@ -1,0 +1,19 @@
+#message-alert {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+.alert-danger {
+    padding: 1rem 135px;
+}
+
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+label.error {
+    display: list-item;
+    margin-top: 5px;
+    color: #842029;
+}
