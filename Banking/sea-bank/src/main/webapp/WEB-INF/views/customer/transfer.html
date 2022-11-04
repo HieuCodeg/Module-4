@@ -41,7 +41,11 @@
                 </div>
                 <div class="col-ms-3">
                     <p>Transaction Amount ($)</p>
-                    <input class="form-control" type="text" id="transactionAmount" th:field="*{transactionAmount}" readonly>
+                    <input class="form-control" type="number" id="transferAmount" th:field="*{transferAmount}" onchange="countMoney()">
+                    <div>
+                        <label class="error" th:if="${#fields.hasErrors('transferAmount')}" th:errors="*{transferAmount}"></label>
+                    </div>
+
                 </div>
             </div>
             <div class="row col-3">
@@ -61,10 +65,7 @@
                 </div>
                 <div class="col-ms-3">
                     <p>Total amount of transaction ($)</p>
-                    <input class="form-control" type="number" id="transferAmount" th:field="*{transferAmount}" onchange="countMoney()">
-                    <div>
-                        <label class="error" th:if="${#fields.hasErrors('transferAmount')}" th:errors="*{transferAmount}"></label>
-                    </div>
+                    <input class="form-control" type="text" id="transactionAmount" th:field="*{transactionAmount}" readonly>
                 </div>
             </div>
         </div>

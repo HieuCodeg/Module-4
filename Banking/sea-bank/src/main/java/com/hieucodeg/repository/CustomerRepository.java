@@ -1,6 +1,7 @@
 package com.hieucodeg.repository;
 
 import com.hieucodeg.model.Customer;
+import com.hieucodeg.model.Transfer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

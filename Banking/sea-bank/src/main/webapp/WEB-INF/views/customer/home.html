@@ -17,7 +17,7 @@
             <div class="col-sm-7 ">
                 <a href="/customers/create" class="btn btn-outline-light"><i class="fa-solid fa-folder-plus"
                                                                              aria-hidden="true"></i> <span>Add New Customer</span></a>
-                <a href="transfers.html" class="btn btn-outline-light"><i class="fa fa-history"
+                <a href="/customers/information" class="btn btn-outline-light"><i class="fa fa-history"
                                                                           aria-hidden="true"></i> <span>Transfer money Information</span></a>
             </div>
         </div>
@@ -67,6 +67,11 @@
                     <a th:href="@{/customers/suspend/__${item.id}__}" class="btn btn-outline-warning" title="Suspended" data-toggle="tooltip">
                         <i class="fa fa-ban" aria-hidden="true"></i>
                     </a>
+<!--                    <a class="btn btn-outline-warning" title="Suspended" data-toggle="tooltip"-->
+<!--                       onclick="showModal()">-->
+<!--                        <i class="fa fa-ban" aria-hidden="true"></i>-->
+<!--                    </a>-->
+
                 </td>
             </tr>
         </th:block>
@@ -74,6 +79,44 @@
     </table>
 
 </div>
+
+<!--                   model xac nhan-->
+<!--<div id="id01" class="modal">-->
+<!--    <div class="containerCon">-->
+<!--        <h1>Bạn có chắc chắn muốn xóa?</h1>-->
+<!--        <div class="content">-->
+<!--            <div class="rowInLine">-->
+<!--                <div class="col">-->
+<!--                    <label for="fullName">Full Name</label>-->
+<!--                    <input  id="fullName" class="form-control" type="text" name="fullName" th:value="${item.fullName}" readonly>-->
+<!--                </div>-->
+<!--                <div class="col">-->
+<!--                    <label for="phone">Phone</label>-->
+<!--                    <input id="phone" class="form-control" type="text" name="phone" th:value="${item.phone}" readonly>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="rowInLine">-->
+<!--                <div class="col">-->
+<!--                    <label for="email">Email</label>-->
+<!--                    <input id="email" class="form-control" type="text" name="email" th:value="${item.email}" readonly>-->
+<!--                </div>-->
+<!--                <div class="col">-->
+<!--                    <label for="address">Address</label>-->
+<!--                    <input id="address" class="form-control" type="text" name="address" th:value="${item.address}" readonly>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="clearfix">-->
+<!--            <button type="button" onclick="document.getElementById('id01').style.display='none'"-->
+<!--                    class="cancelbtn btnModel">Hủy bỏ</button>-->
+<!--            <a th:href="@{/customers/suspend/__${item.id}__}">-->
+<!--                <button type="button" onclick="document.getElementById('id01').style.display='none'"-->
+<!--                        class="deletebtn btnModel">Chấp nhận</button>-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <th:block  th:if="${message != null}">
     <script type="text/javascript">

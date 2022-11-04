@@ -5,25 +5,28 @@ import com.hieucodeg.model.Deposit;
 import com.hieucodeg.model.Transfer;
 import com.hieucodeg.model.Withdraw;
 import com.hieucodeg.service.customer.ICustomerService;
+import com.hieucodeg.service.transfer.ITransferService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
 @Controller
-@RequestMapping("/customers")
+@RequestMapping({"/customers", ""})
 public class HomeController {
 
     @Autowired
     private ICustomerService customerService;
 
-
+    @Autowired
+    private ITransferService transferService;
     @GetMapping
     public ModelAndView showListPage() {
         ModelAndView modelAndView = new ModelAndView();
@@ -41,19 +44,20 @@ public class HomeController {
         return modelAndView;
     }
     @GetMapping("/edit/{id}")
-    public ModelAndView showEditForm(@PathVariable Long id) {
+    public ModelAndView showEditForm(@PathVariable Long id,RedirectAttributes redirectAttributes) {
         Optional<Customer> customer = customerService.findById(id);
         if (customer.isPresent()) {
             ModelAndView modelAndView = new ModelAndView("customer/edit");
             modelAndView.addObject("customer", customer.get());
             return modelAndView;
         } else {
-            ModelAndView modelAndView = new ModelAndView("/error.404");
+            ModelAndView modelAndView =  new ModelAndView("redirect:/customers");
+            redirectAttributes.addFlashAttribute("error","ID khách hàng không hợp lệ");
             return modelAndView;
         }
     }
     @GetMapping("/deposit/{cid}")
-    public ModelAndView showDepositPage(@PathVariable Long cid) {
+    public ModelAndView showDepositPage(@PathVariable Long cid,RedirectAttributes redirectAttributes) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("customer/deposit");
         modelAndView.addObject("deposit", new Deposit());
@@ -61,8 +65,8 @@ public class HomeController {
         Optional<Customer> customerOptional = customerService.findById(cid);
 
         if (!customerOptional.isPresent()) {
-            modelAndView.addObject("customer", new Customer());
-            modelAndView.addObject("error", "ID khách hàng không hợp lệ");
+            modelAndView =  new ModelAndView("redirect:/customers");
+            redirectAttributes.addFlashAttribute("error","ID khách hàng không hợp lệ");
             return modelAndView;
         }
 
@@ -71,7 +75,7 @@ public class HomeController {
         return modelAndView;
     }
     @GetMapping("/withdraw/{cid}")
-    public ModelAndView showWithdrawPage(@PathVariable Long cid) {
+    public ModelAndView showWithdrawPage(@PathVariable Long cid,RedirectAttributes redirectAttributes) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("customer/withdraw");
         modelAndView.addObject("withdraw", new Withdraw());
@@ -80,7 +84,7 @@ public class HomeController {
 
         if (!customerOptional.isPresent()) {
             modelAndView.addObject("customer", new Customer());
-            modelAndView.addObject("error", "ID khách hàng không hợp lệ");
+            redirectAttributes.addFlashAttribute("error", "ID khách hàng không hợp lệ");
             return modelAndView;
         }
 
@@ -89,17 +93,15 @@ public class HomeController {
         return modelAndView;
     }
     @GetMapping("/transfer/{senderId}")
-    public ModelAndView showTransferPage(@PathVariable long senderId) {
+    public ModelAndView showTransferPage(@PathVariable long senderId,RedirectAttributes redirectAttributes) {
         ModelAndView modelAndView = new ModelAndView();
 
 
         Optional<Customer> customerOptional = customerService.findById(senderId);
 
         if (!customerOptional.isPresent()) {
-            modelAndView.setViewName("customer/home");
-            List<Customer> customers = customerService.findAllByDeletedIsFalse();
-            modelAndView.addObject("customers", customers);
-            modelAndView.addObject("error", "ID khách hàng không hợp lệ");
+            modelAndView =  new ModelAndView("redirect:/customers");
+            redirectAttributes.addFlashAttribute("error", "ID khách hàng không hợp lệ");
             return modelAndView;
         }
         else {
@@ -112,56 +114,83 @@ public class HomeController {
         }
         return modelAndView;
     }
+    @GetMapping("/information")
+    public ModelAndView showTransferInformation() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("customer/transferInformation");
+        List<Transfer> transfers = transferService.findAll();
+        modelAndView.addObject("transfers", transfers);
+        return modelAndView;
+    }
     @GetMapping("/suspend/{id}")
-    public ModelAndView showSuspendForm(@PathVariable Long id) {
+    public ModelAndView showSuspendForm(@PathVariable Long id,RedirectAttributes redirectAttributes) {
         Optional<Customer> customer = customerService.findById(id);
         if (customer.isPresent()) {
             ModelAndView modelAndView = new ModelAndView("customer/suspend");
             modelAndView.addObject("customer", customer.get());
             return modelAndView;
         } else {
-            ModelAndView modelAndView = new ModelAndView();
-            modelAndView.setViewName("customer/home");
-            List<Customer> customers = customerService.findAllByDeletedIsFalse();
-            modelAndView.addObject("customers", customers);
-            modelAndView.addObject("error", "ID khách hàng không hợp lệ");
+            ModelAndView modelAndView = new ModelAndView("redirect:/customers");
+            redirectAttributes.addFlashAttribute("error", "ID khách hàng không hợp lệ");
             return modelAndView;
         }
     }
+    @PostMapping("/suspend/{id}")
+    public ModelAndView suspend(@Validated @ModelAttribute Customer customer, BindingResult bindingResult, @PathVariable Long id, RedirectAttributes redirectAttributes) {
+        ModelAndView modelAndView = new ModelAndView();
+
+        if (bindingResult.hasFieldErrors()) {
+            modelAndView.setViewName("customer/suspend");
+        }else {
+
+            customer.setDeleted(true);
+            customerService.save(customer);
+            modelAndView =  new ModelAndView("redirect:/customers");
+            redirectAttributes.addFlashAttribute("message","Xóa thông tin thành công!!!");
+
+        }
+        return modelAndView;
+    }
+//@GetMapping("/suspend/{id}")
+//public ModelAndView suspend(@PathVariable Long id) {
+//    ModelAndView modelAndView = new ModelAndView();
+//    Optional<Customer> customerOptional = customerService.findById(id);
+//
+//    if (!customerOptional.isPresent()) {
+//        modelAndView.setViewName("customer/home");
+//        List<Customer> customers = customerService.findAllByDeletedIsFalse();
+//        modelAndView.addObject("customers", customers);
+//        modelAndView.addObject("error", "ID khách hàng không hợp lệ");
+//        return modelAndView;
+//    }
+//    else {
+//        Customer customer = customerOptional.get();
+//        customer.setDeleted(true);
+//        customerService.save(customer);
+//        modelAndView.setViewName("customer/home");
+//        List<Customer> customers = customerService.findAllByDeletedIsFalse();
+//        modelAndView.addObject("customers", customers);
+//        modelAndView.addObject("message","Xóa thông tin thành công!!!");
+//    }
+//
+//    return modelAndView;
+//}
     @PostMapping("/edit/{id}")
-    public ModelAndView save(@Validated @ModelAttribute Customer customer, BindingResult bindingResult, @PathVariable Long id) {
+    public ModelAndView save(@Validated @ModelAttribute Customer customer, BindingResult bindingResult, @PathVariable Long id,RedirectAttributes redirectAttributes) {
         ModelAndView modelAndView = new ModelAndView();
 
         if (bindingResult.hasFieldErrors()) {
             modelAndView.setViewName("customer/edit");
         }else {
             customerService.save(customer);
-            modelAndView.setViewName("customer/home");
-            List<Customer> customers = customerService.findAllByDeletedIsFalse();
-            modelAndView.addObject("customers", customers);
-            modelAndView.addObject("message","Chỉnh sửa thành công!!!");
-        }
-        return modelAndView;
-    }
-    @PostMapping("/suspend/{id}")
-    public ModelAndView suspend(@Validated @ModelAttribute Customer customer, BindingResult bindingResult, @PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView();
-
-        if (bindingResult.hasFieldErrors()) {
-            modelAndView.setViewName("customer/suspend");
-        }else {
-            customer.setDeleted(true);
-            customerService.save(customer);
-            modelAndView.setViewName("customer/home");
-            List<Customer> customers = customerService.findAllByDeletedIsFalse();
-            modelAndView.addObject("customers", customers);
-            modelAndView.addObject("message","Xóa thông tin thành công!!!");
+            modelAndView =  new ModelAndView("redirect:/customers");
+            redirectAttributes.addFlashAttribute("message","Chỉnh sửa thành công!!!");
         }
         return modelAndView;
     }
 
     @PostMapping("/create")
-    public ModelAndView create(@Validated @ModelAttribute Customer customer, BindingResult bindingResult) {
+    public ModelAndView create(@Validated @ModelAttribute Customer customer, BindingResult bindingResult,RedirectAttributes redirectAttributes) {
         ModelAndView modelAndView = new ModelAndView();
 
         if (bindingResult.hasFieldErrors()) {
@@ -171,16 +200,14 @@ public class HomeController {
             customer.setBalance(new BigDecimal(0L));
             customerService.save(customer);
 
-            modelAndView.setViewName("customer/home");
-            List<Customer> customers = customerService.findAllByDeletedIsFalse();
-            modelAndView.addObject("customers", customers);
-            modelAndView.addObject("message","Tạo mới thành công!!!");
+            modelAndView =  new ModelAndView("redirect:/customers");
+            redirectAttributes.addFlashAttribute("message","Tạo mới thành công!!!");
         }
 
         return modelAndView;
     }
     @PostMapping("/deposit/{cid}")
-    public ModelAndView deposit(@Validated @ModelAttribute Deposit deposit, BindingResult bindingResult, @PathVariable Long cid) {
+    public ModelAndView deposit(@Validated @ModelAttribute Deposit deposit, BindingResult bindingResult, @PathVariable Long cid,RedirectAttributes redirectAttributes) {
         ModelAndView modelAndView = new ModelAndView();
         Optional<Customer> customerOptional = customerService.findById(cid);
 
@@ -207,15 +234,13 @@ public class HomeController {
             modelAndView.addObject("error", "Thao tác không thành công, vui lòng liên hệ Administrator");
             return modelAndView;
         }
-        modelAndView.setViewName("customer/home");
-        List<Customer> customers = customerService.findAllByDeletedIsFalse();
-        modelAndView.addObject("customers", customers);
-        modelAndView.addObject("message","Nộp tiền thành công!!!");
+        modelAndView =  new ModelAndView("redirect:/customers");
+        redirectAttributes.addFlashAttribute("message","Nạp tiền thành công!!!");
         return modelAndView;
     }
 
     @PostMapping("/withdraw/{cid}")
-    public ModelAndView withdraw(@Validated @ModelAttribute Withdraw withdraw, BindingResult bindingResult, @PathVariable Long cid) {
+    public ModelAndView withdraw(@Validated @ModelAttribute Withdraw withdraw, BindingResult bindingResult, @PathVariable Long cid,RedirectAttributes redirectAttributes) {
         ModelAndView modelAndView = new ModelAndView();
         Optional<Customer> customerOptional = customerService.findById(cid);
 
@@ -247,24 +272,20 @@ public class HomeController {
             modelAndView.addObject("error", "Thao tác không thành công, vui lòng liên hệ Administrator");
             return modelAndView;
         }
-        modelAndView.setViewName("customer/home");
-        List<Customer> customers = customerService.findAllByDeletedIsFalse();
-        modelAndView.addObject("customers", customers);
-        modelAndView.addObject("message","Rút tiền thành công!!!");
+        modelAndView =  new ModelAndView("redirect:/customers");
+        redirectAttributes.addFlashAttribute("message","Rút tiền thành công!!!");
         return modelAndView;
     }
     @PostMapping("/transfer/{senderId}")
-    public ModelAndView doTransfer(@Validated @ModelAttribute Transfer transfer, BindingResult bindingResult, @PathVariable long senderId) {
+    public ModelAndView doTransfer(@Validated @ModelAttribute Transfer transfer, BindingResult bindingResult, @PathVariable long senderId,RedirectAttributes redirectAttributes) {
         ModelAndView modelAndView = new ModelAndView();
 
         List<Customer> recipients = customerService.findAllByIdNot(senderId);
         Optional<Customer> senderOptional = customerService.findById(senderId);
 
         if (!senderOptional.isPresent()) {
-            modelAndView.setViewName("customer/home");
-            List<Customer> customers = customerService.findAllByDeletedIsFalse();
-            modelAndView.addObject("customers", customers);
-            modelAndView.addObject("error", "ID người gửi không tồn tại");
+            modelAndView =  new ModelAndView("redirect:/customers");
+            redirectAttributes.addFlashAttribute("error","ID người gửi không tồn tại");
             return modelAndView;
         }
 
@@ -313,7 +334,7 @@ public class HomeController {
             modelAndView.addObject("transfer", new Transfer());
             modelAndView.addObject("recipients", recipients);
             modelAndView.addObject("sender", senderOptional.get());
-            modelAndView.addObject("error", "Thao tác không thành công, vui lòng liên hệ Administrator");
+            modelAndView.addObject("error", "Vui lòng nhập số tiền chuyển");
             return modelAndView;
         }
 
@@ -347,10 +368,8 @@ public class HomeController {
             return modelAndView;
         }
 
-        modelAndView.setViewName("customer/home");
-        List<Customer> customers = customerService.findAllByDeletedIsFalse();
-        modelAndView.addObject("customers", customers);
-        modelAndView.addObject("message","Chuyển tiền thành công!!!");
+        modelAndView =  new ModelAndView("redirect:/customers");
+        redirectAttributes.addFlashAttribute("message","Chuyển tiền thành công!!!");
         return modelAndView;
     }
 

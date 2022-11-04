@@ -2,8 +2,7 @@ package com.hieucodeg.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
+
 import java.math.BigDecimal;
 
 
@@ -104,4 +103,5 @@ public class Transfer extends BaseEntity {
     public void setTransactionAmount(BigDecimal transactionAmount) {
         this.transactionAmount = transactionAmount;
     }
+
 }
