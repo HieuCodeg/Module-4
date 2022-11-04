@@ -95,8 +95,17 @@
     </div>
 </div>
 
+<footer>
+    <div id="message-alert">
+        <th:block th:if="${error}">
+            <div class="alert-danger">
+                <label class="error" th:text="${error}"></label>
+            </div>
+        </th:block>
 
-<button type="button" onclick="showToast()">nut</button>
+    </div>
+</footer>
+
 
 <script>
     let icons = document.querySelectorAll('[data-toggle="tooltip"]');

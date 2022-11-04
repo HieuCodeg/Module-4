@@ -3,7 +3,7 @@
 
 <head>
     <th:block th:replace="/layout/head :: head"/>
-    <title>Edit Customer</title>
+    <title>Suspend Customer</title>
     <link rel="stylesheet" href="/assets/css/create.css">
 </head>
 
@@ -12,7 +12,7 @@
     <div class="table-title">
         <div class="row">
             <div class="col-sm-5">
-                <h1>Edit Customer</h1>
+                <h1>Suspension of customers</h1>
             </div>
             <div class="col-sm-7 btn-a">
                 <a class="btn btn-outline-light" href="/customers"><i class="fa fa-list"></i> List of customers
@@ -57,9 +57,9 @@
             </div>
         </div>
         <div class="btn-action">
-            <button class="btn btn-outline-primary" type="text">
-                <i class="fa-solid fa-plus"></i> Save customer
-            </button>
+            <div class="btn-suspended">
+                <button class="btn btn-outline-danger" type="text"><i class="fa fa-ban"></i> Suspendes</button>
+            </div>
         </div>
     </form>
     <footer>

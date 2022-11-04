@@ -13,9 +13,18 @@ import java.util.List;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
+
+    List<Customer> findAllByIdNot(Long senderId);
     @Modifying
     @Query("UPDATE Customer AS c " +
             "SET c.balance = c.balance + :balance " +
             "WHERE c.id = :customerId")
     void incrementBalance(@Param("customerId") Long customerId, @Param("balance") BigDecimal balance);
+
+    @Modifying
+    @Query("UPDATE Customer AS c " +
+            "SET c.balance = c.balance - :balance " +
+            "WHERE c.id = :customerId")
+    void decreaseBalance(@Param("customerId") Long customerId, @Param("balance") BigDecimal balance);
+    List<Customer> findAllByDeletedIsFalse();
 }

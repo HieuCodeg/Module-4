@@ -3,7 +3,7 @@
 
 <head>
     <th:block th:replace="/layout/head :: head"/>
-    <title>Deposit Money</title>
+    <title>Withdraw Money</title>
     <link rel="stylesheet" href="/assets/css/deposit.css">
 </head>
 <body>
@@ -11,14 +11,14 @@
     <div class="table-title">
         <div class="row">
             <div class="col-sm-5">
-                <h2>Deposit money into customer's account</h2>
+                <h2>Withdraw money from the customer's account</h2>
             </div>
             <div class="col-sm-7">
                 <a href="/customers" class="btn btn-outline-light"><i class="fa fa-list"></i>Customer list</a>
             </div>
         </div>
     </div>
-    <form method="post"  th:object="${deposit}">
+    <form method="post"  th:object="${withdraw}">
     <div class="form-edit">
         <div class="row col-6">
             <div class="col-ms-6">
@@ -44,9 +44,9 @@
             </div>
         </div>
     </div>
-    <div class="btn-deposit">
-        <button class="btn btn-outline-success" type="text"><i class="fa-solid fa-plus"></i> Deposit</button>
-    </div>
+        <div class="btn-withdraw">
+            <button class="btn btn-outline-warning" type="text"><i class="fa-solid fa-minus"></i> Withdarw</button>
+        </div>
     </form>
 </div>
 

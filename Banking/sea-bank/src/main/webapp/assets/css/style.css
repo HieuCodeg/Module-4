@@ -17,3 +17,25 @@ label.error {
     margin-top: 5px;
     color: #842029;
 }
+
+.btn-withdraw {
+    margin-top: 20px;
+}
+.btn-withdraw button:hover {
+    background-color: orange;
+    color: white;
+}
+.btn-transfer-money {
+    margin-top: 20px;
+}
+.btn-transfer-money button:hover {
+    background-color: rgb(66, 66, 235);
+    color: white;
+}
+.btn-withdraw {
+    margin-top: 20px;
+}
+.btn-withdraw button:hover {
+    background-color: orange;
+    color: white;
+}

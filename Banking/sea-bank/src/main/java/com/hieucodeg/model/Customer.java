@@ -33,6 +33,9 @@ public class Customer extends BaseEntity{
     @OneToMany
     private List<Deposit> deposits;
 
+    @OneToMany
+    private List<Withdraw> withdraws;
+
     public Customer() {
     }
 
