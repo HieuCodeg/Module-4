@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Beautiful Day</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <img id="img-of-the-day" style="width: 400px">
+    <form action="/save" method="post" th:object="${comment}">
+        <select class="form-select" aria-label="Default select example" th:field="*{mark}">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" class="form-control" id="author" th:field="*{author}" required>
+        </div>
+        <div class="form-group">
+            <label for="feedback">Feedback</label>
+            <textarea  class="form-control" id="feedback" th:field="*{feedback}" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Comment</button>
+    </form>
+    <div th:each="row,rowStat : ${commentList}">
+        <hr>
+        <div class="row" style="font-weight: bolder">
+            +
+            <p th:text="${row.mark}"></p>
+            &nbsp;
+            <p th:text="${row.author}"></p>
+        </div>
+        <div class="row">
+            <span th:text="${row.feedback}"></span>
+            <p>
+                <sub>
+                    <span th:text="${row.getLike()}"></span>
+                    likes
+
+                </sub>
+                <a th:href="@{/like/__${row.id}__ }">
+                    <button style="font-size: x-small" class="btn btn-outline-primary">Like</button>
+                </a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    let query = 'https://api.nasa.gov/planetary/apod?api_key=UkeYlpAfXAGdlTFINU6ujVbbndRxLdFeYTMhoq97';
+    let request = new XMLHttpRequest();
+    request.open('GET', query);
+    request.onload = function () {
+        if (request.status === 200) {
+            let response = JSON.parse(request.responseText);
+            document.getElementById('img-of-the-day').setAttribute('src', response.url);
+        }
+    };
+    request.send();
+</script>
+</body>
+</html>
