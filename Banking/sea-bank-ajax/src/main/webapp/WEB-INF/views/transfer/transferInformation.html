@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:replace="/layout/head :: head"/>
+    <title>Customer Management</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-5">
+                <h2>Transfer money Information</h2>
+            </div>
+            <div class="col-sm-7 ">
+                <a href="/customers" class="btn btn-outline-light"><i class="fa fa-list"></i>Customer list</a>
+            </div>
+        </div>
+    </div>
+    <table class="table table-hover" id="tbTransfer">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Sender ID</th>
+            <th>Sender Name</th>
+            <th>Recipient ID</th>
+            <th>Recipient Name</th>
+            <th>Transfer Amount ($)</th>
+            <th>Fees (%)</th>
+            <th>Fees Amount ($)</th>
+            <th>Transaction Amount ($)</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+
+
+<th:block th:replace="/layout/script :: script"/>
+
+<script>
+    const page = {
+        urls: {
+            getAllHistories: App.TRANSFER_API + "/information",
+
+        },
+        elements: {},
+        loadData: {},
+        commands: {},
+        dialogs: {
+            elements: {},
+            loadData: {},
+            commands: {},
+            alertDanger: {}
+        },
+        inintializeEventControl: {}
+    }
+
+
+    page.elements.tbTransfer = $("#tbTransfer");
+    page.elements.tbTransferBody = $("#tbTransfer tbody");
+
+    let sender = new Customer();
+    let recipient = new Customer();
+
+    page.commands.getAllHistories = () => {
+        $.ajax({
+            headers: {
+                "accept": "application/json",
+                "content-type": "application/json"
+            },
+            type: "GET",
+            url: page.urls.getAllHistories
+        })
+            .done((data) => {
+
+                $.each(data, (i, item) => {
+                    let str = renderCustomer(item);
+
+                    page.elements.tbTransferBody.prepend(str);
+                })
+            })
+            .fail((error) => {
+                console.error(error);
+            })
+    }
+
+    function renderCustomer(obj) {
+        return `
+                    <tr id="tr_${obj.id}">
+                        <td>${obj.id}</td>
+                        <td>${obj.senderId}</td>
+                        <td>${obj.senderName}</td>
+                        <td>${obj.recipientId}</td>
+                        <td>${obj.recipientName}</td>
+                        <td>${obj.transferAmount}</td>
+                        <td>${obj.fees}</td>
+                        <td>${obj.feesAmount}</td>
+                        <td>${obj.transactionAmount}</td>
+                    </tr>
+                `;
+    }
+
+
+
+
+    page.commands.loadData = () => {
+        page.commands.getAllHistories();
+    }
+
+
+
+    $(() => {
+        page.commands.loadData();
+
+    });
+
+
+
+</script>
+
+</body>
+
+</html>
