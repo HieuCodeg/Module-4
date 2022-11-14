@@ -1,11 +1,20 @@
 package com.hieucodeg.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.DecimalMin;
 
 import java.math.BigDecimal;
 
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "transfers")
 public class Transfer extends BaseEntity {
@@ -35,73 +44,5 @@ public class Transfer extends BaseEntity {
     @Column(name = "transaction_amount", precision = 12, scale = 0, nullable = false)
     private BigDecimal transactionAmount;
 
-    public Transfer() {
-    }
-
-    public Transfer(long id, Customer sender, Customer recipient, BigDecimal transferAmount, long fees, BigDecimal feesAmount, BigDecimal transactionAmount) {
-        this.id = id;
-        this.sender = sender;
-        this.recipient = recipient;
-        this.transferAmount = transferAmount;
-        this.fees = fees;
-        this.feesAmount = feesAmount;
-        this.transactionAmount = transactionAmount;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public Customer getSender() {
-        return sender;
-    }
-
-    public void setSender(Customer sender) {
-        this.sender = sender;
-    }
-
-    public Customer getRecipient() {
-        return recipient;
-    }
-
-    public void setRecipient(Customer recipient) {
-        this.recipient = recipient;
-    }
-
-    public BigDecimal getTransferAmount() {
-        return transferAmount;
-    }
-
-    public void setTransferAmount(BigDecimal transferAmount) {
-        this.transferAmount = transferAmount;
-    }
-
-    public long getFees() {
-        return fees;
-    }
-
-    public void setFees(long fees) {
-        this.fees = fees;
-    }
-
-    public BigDecimal getFeesAmount() {
-        return feesAmount;
-    }
-
-    public void setFeesAmount(BigDecimal feesAmount) {
-        this.feesAmount = feesAmount;
-    }
-
-    public BigDecimal getTransactionAmount() {
-        return transactionAmount;
-    }
-
-    public void setTransactionAmount(BigDecimal transactionAmount) {
-        this.transactionAmount = transactionAmount;
-    }
 
 }

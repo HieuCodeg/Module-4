@@ -119,7 +119,7 @@ public ResponseEntity<?> update(@PathVariable String customerIdStr,@Validated @R
     }
 
 
-    customer.setId(customerId);
+//    customer.setId(customerId);
     customer.setFullName(customerDTO.getFullName());
     customer.setEmail(customerDTO.getEmail());
     customer.setPhone(customerDTO.getPhone());
@@ -192,6 +192,10 @@ public ResponseEntity<?> update(@PathVariable String customerIdStr,@Validated @R
             throw new DataInputException("ID người nhận không tồn tại");
         }
         Customer recipient = recipientOptional.get();
+
+        if (sender.getId() == recipient.getId()) {
+            throw new DataInputException("Giao dịch không thành công, người nhận không hợp lệ!");
+        }
 
         BigDecimal transferAmount = new BigDecimal(Long.parseLong(transferDTO.getTransferAmount()));
         BigDecimal currentBalanceSender = sender.getBalance();
