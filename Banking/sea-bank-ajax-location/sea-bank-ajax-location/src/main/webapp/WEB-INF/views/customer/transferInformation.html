@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:replace="/layout/head :: head"/>
+    <title>Transfer money Information</title>
+    <link rel="stylesheet" href="/assets/css/deposit.css">
+</head>
+<body>
+<div class="container">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-5">
+                <h2>Transfer money Information</h2>
+            </div>
+            <div class="col-sm-7">
+                <a href="/customers" class="btn btn-outline-light"><i class="fa fa-list"></i>Customer list</a>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-hover transfer-list">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Sender ID</th>
+            <th>Sender Name</th>
+            <th>Recipient ID</th>
+            <th>Recipient Name</th>
+            <th>Transfer Amount ($)</th>
+            <th>Fees (%)</th>
+            <th>Fees Amount ($)</th>
+            <th>Transaction Amount ($)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="item : ${transfers}">
+            <tr>
+                <td th:text="${item.id}"></td>
+                <td th:text="${item.getSender().id}"></td>
+                <td th:text="${item.getSender().fullName}"></td>
+                <td th:text="${item.getRecipient().id}"></td>
+                <td th:text="${item.getRecipient().fullName}"></td>
+                <td class="text-end num-space" th:text="${item.transferAmount}"></td>
+                <td class="text-end num-space" th:text="${item.fees}"></td>
+                <td class="text-end num-space" th:text="${item.feesAmount}"></td>
+                <td class="text-end num-space" th:text="${item.transactionAmount}"></td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</div>
+<footer>
+    <div id="message-alert">
+        <th:block th:if="${error}">
+            <div class="alert-danger">
+                <label class="error" th:text="${error}"></label>
+            </div>
+        </th:block>
+
+    </div>
+</footer>
+
+</body>
+</html>
