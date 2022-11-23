@@ -5,112 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7d66ca1-ff37-4037-bb4a-277cc05160d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/12377f78-00ee-4d61-b8a8-6107b0d0fb5a.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/12377f78-00ee-4d61-b8a8-6107b0d0fb5a/storage_v2/_src_/schema/cms.SYEBAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/12377f78-00ee-4d61-b8a8-6107b0d0fb5a/storage_v2/_src_/schema/cms.SYEBAA.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/12377f78-00ee-4d61-b8a8-6107b0d0fb5a/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/12377f78-00ee-4d61-b8a8-6107b0d0fb5a/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/12377f78-00ee-4d61-b8a8-6107b0d0fb5a/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/12377f78-00ee-4d61-b8a8-6107b0d0fb5a/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/configuration/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/configuration/AppInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/exception/BadWordlException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/logger/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/model/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/repository/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/repository/ICommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/repository/IGeneralRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/service/ICommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/service/IGeneralService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/badWord.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/configuration/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/configuration/AppInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/controller/SmartphoneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/model/Smartphone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/repository/ISmartphoneRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/service/ISmartphoneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/service/SmartphoneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/webapp/WEB-INF/views/phones/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/java/com/hieucodeg/configuration/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/java/com/hieucodeg/configuration/AppInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/java/com/hieucodeg/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/java/com/hieucodeg/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/java/com/hieucodeg/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/java/com/hieucodeg/repository/ICustomerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/java/com/hieucodeg/service/IGeneralService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/java/com/hieucodeg/service/customer/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/java/com/hieucodeg/service/customer/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/webapp/WEB-INF/views/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/webapp/WEB-INF/views/test2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../count-view-page/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../count-view-page/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../count-view-page/src/main/java/com/hieucodeg/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../count-view-page/src/main/java/com/hieucodeg/AppConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../count-view-page/src/main/java/com/hieucodeg/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../count-view-page/src/main/java/com/hieucodeg/AppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../count-view-page/src/main/java/com/hieucodeg/controller/CounterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../count-view-page/src/main/java/com/hieucodeg/controller/CounterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../count-view-page/src/main/java/com/hieucodeg/model/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../count-view-page/src/main/java/com/hieucodeg/model/Counter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../count-view-page/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../count-view-page/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-cart/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-cart/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/card.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/layout/head.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/layout/script.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hieucodeg/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hieucodeg/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hieucodeg/repository/IGeneralRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/repository/IGeneralRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hieucodeg/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hieucodeg/service/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping-cart/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/AppConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/controller/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/controller/ShoppingCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/model/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/repository/IProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/service/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/java/com/hieucodeg/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-save-user/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-save-user/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-save-user/src/main/webapp/WEB-INF/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-save-user/src/main/webapp/WEB-INF/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/aa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopping-cart/src/main/webapp/WEB-INF/views/shop.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/customer-management/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/customer-management/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/configuration/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/configuration/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/configuration/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/configuration/AppInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/controller/SmartphoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/controller/SmartphoneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/model/Smartphone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/model/Smartphone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/repository/ISmartphoneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/repository/ISmartphoneRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/service/ISmartphoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/service/ISmartphoneService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/service/SmartphoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/java/com/hieucodeg/service/SmartphoneService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../11. Web Service va RESTful/phone-management/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/java/com/hieucodeg/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/java/com/hieucodeg/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/webapp/WEB-INF/views/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/webapp/WEB-INF/views/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/webapp/WEB-INF/views/test2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../12. JQuery &amp;amp AJAX/customer-management/src/main/webapp/WEB-INF/views/test2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../2. Spring Controller/sandwich/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2. Spring Controller/sandwich/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../3. Views &amp;amp Form/customer-management-thymleaf/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../3. Views &amp;amp Form/customer-management-thymleaf/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../3. Views &amp;amp Form/customer-management-thymleaf/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../3. Views &amp;amp Form/customer-management-thymleaf/.idea/workspace.xml" afterDir="false" />
@@ -2256,22 +2185,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/GitHub/Module-3/Case study/quan-ly-dao-tao",
-    "spring.configuration.checksum": "e9a2bdb0417613dc9643fd1cdc744ee5"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GitHub/Module-3/Case study/quan-ly-dao-tao&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e9a2bdb0417613dc9643fd1cdc744ee5&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\GitHub\Module-4\5. Thao tac voi CSDL va ORM\image-of-day\src\main\resources" />
@@ -2390,7 +2319,8 @@
       <workItem from="1667319924312" duration="1266000" />
       <workItem from="1667364074012" duration="153000" />
       <workItem from="1667364663991" duration="662000" />
-      <workItem from="1667794016436" duration="6652000" />
+      <workItem from="1667794016436" duration="9240000" />
+      <workItem from="1667882874093" duration="16000" />
     </task>
     <servers />
   </component>

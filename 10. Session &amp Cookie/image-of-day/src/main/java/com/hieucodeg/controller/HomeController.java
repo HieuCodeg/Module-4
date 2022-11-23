@@ -9,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashSet;
@@ -44,7 +41,7 @@ public class HomeController {
 
     @PostMapping("/save")
     public String savecomment(Comment comment, Model model) throws BadWordlException {
-        commentService.save(comment);
+        commentService.save(comment, (HashSet<String>) badList);
 
         return "redirect:/";
     }
@@ -54,6 +51,11 @@ public class HomeController {
         Comment comment = commentService.findById(id);
         commentService.save(comment);
         return "redirect:/";
+    }
+
+    @ExceptionHandler(BadWordlException.class)
+    public ModelAndView showInputNotAcceptable() {
+        return new ModelAndView("badWord");
     }
 
 

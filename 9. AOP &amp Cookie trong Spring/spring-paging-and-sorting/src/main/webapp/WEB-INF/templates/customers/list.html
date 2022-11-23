@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer List</title>
+  <style>
+    table {
+      border: 1px solid #000;
+    }
+
+    th, td {
+      border: 1px dotted #555;
+    }
+  </style>
+</head>
+<body>
+<span th:if="${keyword}">
+  Search result for <code>"[[${keyword}]]"</code>, <a th:href="@{/customers}">click here to clear</a>.<br>
+</span>
+There are [[${customers.totalElements}]] customer(s).
+<form>
+  <label>
+    Search by name or email:
+    <input type="text" name="s">
+  </label>
+  <input type="submit" value="Search">
+</form>
+<table>
+  <caption>Customers List</caption>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Province</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="c : ${customers}">
+    <td th:text="${c.id}"></td>
+    <td>
+      <a th:href="@{/customers/{id}(id=${c.id})}" th:text="${c.name}"></a>
+    </td>
+    <td th:text="${c.email}"></td>
+    <td th:text="${c.address}"></td>
+    <td th:text="${c.province?.name}"></td>
+  </tr>
+  </tbody>
+</table>
+<div>
+  <a th:if="${customers.hasPrevious()}"
+     th:href="@{'/customers'(page=${customers.number - 1}, size=${customers.size}, s=${keyword})}">
+    Previous
+  </a>
+  [[${customers.number + 1}]]/[[${customers.totalPages}]]
+  <a th:if="${customers.hasNext()}"
+     th:href="@{'/customers'(page=${customers.number + 1}, size=${customers.size}, s=${keyword})}">
+    Next
+  </a>
+</div>
+</body>
+</html>

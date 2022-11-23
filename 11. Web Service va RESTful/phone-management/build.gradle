@@ -22,10 +22,29 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
-    compileOnly('jakarta.servlet:jakarta.servlet-api:5.0.0')
+    compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    implementation group: 'org.springframework', name: 'spring-core', version: '5.3.20'
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.20'
+    implementation group: 'org.springframework', name: 'spring-beans', version: '5.3.20'
+    implementation group: 'org.springframework', name: 'spring-web', version: '5.3.20'
+    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.20'
+    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.20'
+    implementation group: 'org.thymeleaf', name: 'thymeleaf-spring5', version: '3.0.11.RELEASE'
+    implementation group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '2.5.2'
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.3.0.Final'
+    implementation group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.3.0.Final'
+    implementation group: 'org.springframework', name: 'spring-orm', version: '5.3.20'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
+    implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.4.2'
+    implementation group: 'org.springframework', name: 'spring-tx', version: '5.3.20'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.3'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.13.2'
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+
+
+
+
 }
 
 test {

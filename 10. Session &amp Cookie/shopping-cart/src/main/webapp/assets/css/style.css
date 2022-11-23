@@ -1,0 +1,108 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} @import url('https://fonts.googleapis.com/css2?family=Lora&family=Roboto+Slab&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to top,#fff, #c5e8c0 150%) no-repeat;
+}
+.wrapper{
+    box-shadow: 10px 10px 80px #c9fab2;
+    max-width: 800px;
+    margin:  30px auto;
+}
+select{
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid #ddd;
+    color: #555;
+}
+img{
+    object-fit: contain;
+    width: 150px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p.h4{
+    font-family: 'Roboto Slab', serif;
+}
+.rating{
+    font-size: 0.7rem;
+}
+.fa-star,.reviews{
+    color: #daa520;
+}
+div.h4{
+    font-size: 1.8rem;
+    color: #d4a838;
+    font-family: 'Lora', serif;
+    margin: 0;
+}
+.btn{
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 8px 20px;
+}
+.card{
+    position: relative;
+}
+.card:hover{
+    border: 1px solid #000;
+    box-shadow: 3px 3px 30px rgb(166, 255, 144);
+}
+.red{
+    background-color: #e03e3e;
+    position: absolute;
+    color: #fff;
+    border-radius: 5px;
+    right: 5px;
+    top: 5px;
+    font-size: 0.9rem;
+}
+a:hover{
+    text-decoration: none;
+}
+@media(max-width:800px){
+    .wrapper{
+        margin: 20px 10px;
+    }
+    p.h4{
+        font-size: 1.35rem;
+        padding-top: 10px;
+    }
+}
+@media(max-width:767px){
+    .wrapper{
+        max-width: 500px;
+        margin: 20px auto;
+    }
+}
+@media(max-width:424px){
+    .wrapper{
+        width: 100%;
+        margin: auto;
+    }
+    div.text-muted{
+        font-size: 0.75rem;
+    }
+}

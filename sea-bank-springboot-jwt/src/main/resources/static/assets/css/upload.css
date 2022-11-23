@@ -1,0 +1,41 @@
+.main-container .wrapper {
+    position: relative;
+    height: 250px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    border-width: 2px;
+    border-style: dashed;
+    border-color: rgb(194, 205, 218);
+    border-image: initial;
+    overflow: hidden;
+}
+
+.wrapper .image-preview {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .content {
+    text-align: center;
+}
+
+.wrapper .file-name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    display: none;
+    padding: 8px 0;
+    background: linear-gradient(135deg, rgb(58, 143, 254) 0%, rgb(150, 88, 254) 100%);
+}

@@ -30,7 +30,7 @@ public class CommentService implements ICommentService{
 
     @Override
     public void save(Comment comment, HashSet<String> badList) throws BadWordlException {
-        commentRepository.save(comment);
+        commentRepository.save(comment,badList);
     }
 
     @Override

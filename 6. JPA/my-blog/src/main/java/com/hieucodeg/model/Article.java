@@ -1,7 +1,8 @@
 package com.hieucodeg.model;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
+
 
 @Entity
 @Table(name = "articles")
@@ -12,7 +13,7 @@ public class Article {
     private Long id;
     private String title;
     private String author;
-    @Column(columnDefinition = "DATE default (curdate())")
+    @Column(columnDefinition = "DATETIME default CURRENT_TIMESTAMP")
     private Date datePost;
     @Column(columnDefinition = "TEXT default NULL")
     private String content;

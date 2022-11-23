@@ -24,7 +24,9 @@
         <a id="decrease_button" th:text="${'-'}"></a>
         <span th:text="${product.getValue()}"></span>
         <a id="increase_button" th:href="@{/add/__${product.getKey().id}__(action='show')}"
-           th:text="${'+'}"></a>
+           th:text="${'+'}">
+
+        </a>
       </td>
       <td th:text="${product.getKey().price}"></td>
     </tr>

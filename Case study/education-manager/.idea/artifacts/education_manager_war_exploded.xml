@@ -13,6 +13,25 @@
         <element id="directory" name="classes">
           <element id="module-output" name="education-manager" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.3.20" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.3.20" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring5:3.0.15.RELEASE" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.15.RELEASE" />
+          <element id="library" level="project" name="Maven: org.attoparser:attoparser:2.0.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Maven: nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.5.3" />
+          <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy:2.5.14" />
+          <element id="library" level="project" name="Maven: nz.net.ultraq.extensions:groovy-extensions:0.3.0" />
+          <element id="library" level="project" name="Maven: nz.net.ultraq.thymeleaf:thymeleaf-expression-processor:1.2.0" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/education-manager-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />

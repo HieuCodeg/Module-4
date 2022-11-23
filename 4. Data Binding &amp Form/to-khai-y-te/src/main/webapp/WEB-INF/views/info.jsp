@@ -40,7 +40,6 @@
         <div class="form-group">
             <label >Họ tên(ghi chữ IN HOA) <span class="star">(*)</span></label>
             <form:input path="name" class="form-control" readonly="true"></form:input>
-
         </div>
         <div class="form-row">
             <div class="form-group col-md-4">

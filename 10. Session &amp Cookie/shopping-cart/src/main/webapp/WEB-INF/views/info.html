@@ -7,6 +7,7 @@
 </head>
 <body className='snippet-body'>
 <div class="wrapper rounded bg-white">
+  <a href="/"><i class="fa-sharp fa-solid fa-house-chimney fa-2x"></i></a>
   <div class="d-flex align-items-center justify-content-end px-sm-3 pt-3 px-1">
     <div class="text-muted">Items per page (<b>53 items</b> )</div>
     <select name="num" id="num" class="px-2 py-1 ml-sm-2 ml-1">
@@ -23,13 +24,12 @@
       <option value="popular">Popular</option>
       <option value="featured">Featured</option>
     </select>
-    <i class="fa-solid fa-cart-shopping fa-2x"></i>
+    <a href="/shopping-cart"><i class="fa-solid fa-cart-shopping fa-2x"></i></a>
   </div>
   <hr>
 
 
   <div class="row px-sm-2 px-0 pt-3">
-    <th:block th:each="product:${products}">
     <div class="col-md-4 offset-md-0 offset-sm-2 offset-1 col-sm-8 col-10 offset-sm-2 offset-1 mb-3">
       <div class="card">
         <div class="px-2 red text-uppercase">new</div>
@@ -37,7 +37,7 @@
           <img th:src="@{${product.image}}" class="product" alt="">
         </div>
         <b class="px-2">
-          <p class="h4" th:text="${product.name}"></p>
+          <p class="h4 text-center" th:text="${product.name}"></p>
         </b>
         <div class="d-flex align-items-center justify-content-start rating border-top border-bottom py-2">
           <div class="text-muted text-uppercase px-2 border-right">insto2007</div>
@@ -62,7 +62,11 @@
         </div>
       </div>
     </div>
-    </th:block>
+    <div class="col-md-8">
+      <h2 th:text="${product.name}"></h2>
+      <hr>
+      <p th:text="${product.getDescription()}"></p>
+    </div>
   </div>
 
 </div>

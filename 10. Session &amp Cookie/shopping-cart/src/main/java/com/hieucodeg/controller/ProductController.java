@@ -21,10 +21,18 @@ public class ProductController {
         return new Cart();
     }
 
-    @GetMapping("/shop")
+    @GetMapping
     public ModelAndView showShop() {
-        ModelAndView modelAndView = new ModelAndView("/shop");
+        ModelAndView modelAndView = new ModelAndView("/home");
         modelAndView.addObject("products", productService.findAll());
+        return modelAndView;
+    }
+
+    @GetMapping("/info/{id}")
+    public ModelAndView showInfo(@PathVariable Long id){
+        ModelAndView modelAndView = new ModelAndView("/info");
+        Product product = productService.findById(id).get();
+        modelAndView.addObject("product",product);
         return modelAndView;
     }
 
@@ -39,6 +47,6 @@ public class ProductController {
             return "redirect:/shopping-cart";
         }
         cart.addProduct(productOptional.get());
-        return "redirect:/shop";
+        return "redirect:/";
     }
 }

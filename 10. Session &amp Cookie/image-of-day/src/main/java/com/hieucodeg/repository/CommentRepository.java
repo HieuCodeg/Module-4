@@ -37,11 +37,22 @@ public class CommentRepository implements ICommentRepository{
 
     @Override
     public void save(Comment comment) {
-
+        if (comment.getId() != null) {
+            comment.setLike(comment.getLike() + 1);
+            em.merge(comment);
+        } else {
+            comment.setDateComment(new Date(System.currentTimeMillis()));
+            em.persist(comment);
+        }
     }
 
     @Override
     public void save(Comment comment, HashSet<String> badList) throws BadWordlException {
+        for (String item:badList) {
+            if (comment.getFeedback().contains(item)) {
+                throw new BadWordlException();
+            }
+        }
         if (comment.getId() != null) {
             comment.setLike(comment.getLike() + 1);
             em.merge(comment);

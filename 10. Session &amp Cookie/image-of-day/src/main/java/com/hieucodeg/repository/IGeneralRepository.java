@@ -9,7 +9,7 @@ public interface IGeneralRepository<T> {
 
     T findById(Long id);
 
-    void save(T t) throws BadWordlException;
+    void save(T t);
 
     void remove(Long id);
 }

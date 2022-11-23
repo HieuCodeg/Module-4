@@ -8,7 +8,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 @Transactional
@@ -38,7 +38,7 @@ public class ArticleRepository implements IArticleRepository {
         if (article.getId() != null) {
             em.merge(article);
         } else {
-            article.setDatePost(new Date(System.currentTimeMillis()));
+            article.setDatePost(new Date());
             em.persist(article);
         }
     }

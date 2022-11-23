@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+
+  <title>Input PhoneNumber</title>
 </head>
 <body>
-$END$
+<form action="#" th:action="@{/}" th:object="${phoneNumber}"
+      method="POST">
+  <table>
+    <tr>
+      <td>PhoneNumber</td>
+      <td><input type="text" th:field="*{number}"/></td>
+      <td th:if="${#fields.hasErrors('number')}" th:errors="*{number}">Name Error</td>
+    </tr>
+    <td>BigDEcimal</td>
+    <td><input type="text" th:field="*{decimal}"/></td>
+    <td th:if="${#fields.hasErrors('decimal')}" th:errors="*{decimal}">Name Error</td>
+    </tr>
+  </table>
+  <button type="submit">submit</button>
+</form>
 </body>
 </html>
